@@ -1,6 +1,6 @@
 # 17 — Production Readiness
 
-- [ ] Unit tests passing
+- [x] Unit tests passing
 - [ ] Integration suite passing
 - [ ] Chaos suite passing
 - [ ] Performance targets documented
