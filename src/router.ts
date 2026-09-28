@@ -57,7 +57,8 @@ export class EdgeRouter{
 
   async proxy(req:Request,pathTarget:{service:string;target:EdgeInstance}):Promise<Response>{
     const incoming=new URL(req.url);
-    const raw=pathTarget.target.address.includes("://")?pathTarget.target.address:`http://${pathTarget.target.address}`;\n    const base=new URL(raw);
+    const raw=pathTarget.target.address.includes("://")?pathTarget.target.address:`http://${pathTarget.target.address}`;
+    const base=new URL(raw);
     base.pathname=incoming.pathname;
     base.search=incoming.search;
     const init:RequestInit={
